@@ -1,3 +1,10 @@
+
+# Commands:
+## Start dev:
+npm run dev
+## Build:
+npm run build
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
@@ -25,7 +32,3 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 3. Open `src/main.ts` in VSCode
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
-
-
-### Start dev:
-npm run dev
