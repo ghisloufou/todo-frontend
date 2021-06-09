@@ -5,6 +5,9 @@ npm run dev
 ## Build:
 npm run build
 
+## Doc:
+modal doc : https://v3.vue-final-modal.org/examples/stepByStep
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
