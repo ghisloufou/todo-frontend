@@ -23,14 +23,17 @@ export default defineComponent({
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #cad1d8;
 }
 body {
-  background-color: #121212;
+  background-color: #171717;
+  background-image: url(./assets/polygon-scatter-haikei.svg);
+  background-size: cover;
 }
 body,
 html {
@@ -70,6 +73,7 @@ button {
   cursor: pointer;
   transition: all ease 0.05s;
   user-select: none;
+  font-weight: 600;
 }
 button:hover {
   background-color: hsl(0, 0%, 60%);
