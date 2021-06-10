@@ -5,7 +5,7 @@
     </vue-final-modal>
     <div class="title">Tâches à faire</div>
     <!-- <div class="spacer"></div> -->
-    <button class="add-task" @click="openTaskPanel">Ajouter une tâche</button>
+    <button class="add-task" @click="openTaskPanel"><font-awesome-icon style="font-size:12px" icon="plus" />  New</button>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default defineComponent({
   }),
   methods: {
     openTaskPanel() {
-      console.log("open panel");
       this.$vfm.show("example");
+      console.log("opened panel");
     },
     closeTaskPanel() {},
   },

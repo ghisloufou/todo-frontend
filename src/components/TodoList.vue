@@ -1,6 +1,7 @@
 <template>
-  <div class="container todo-container">
-    <button @click="addTodo"></button>
+  <div class="todo-container">
+    <!-- <button class="add-button" @click="addTodo">Ajouter une tâche</button> -->
+    <div class="todo-title">{{title}}</div>
     <TodoListItem
       v-for="todo of todos"
       v-bind:key="todo.id"
@@ -18,7 +19,12 @@ export default defineComponent({
   components: {
     TodoListItem,
   },
-  props: {},
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       todos: [
@@ -42,10 +48,24 @@ export default defineComponent({
 
 <style scoped>
 .todo-container {
-  /* background-color: rgb(21, 31, 23); */
-  background-color: #212121;
+  /* background-color: #212121; */
   padding: 3px;
   border-radius: 6px;
   flex: 1;
+  margin-top: 1rem;
+}
+.todo-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-variant: all-small-caps;
+  text-align: left;
+}
+.add-button {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+.add-button:hover {
+  background-color: #73b7fc;
+  background-image: linear-gradient(62deg, #73b7fc 0%, #d2acfc 100%);
 }
 </style>

@@ -1,22 +1,21 @@
 <template>
   <TheNavbar />
-  <div class="carousel centered">
-    <TaskDay />
-    <TaskDay />
-    <TaskDay />
+  <div class="content container">
+    <TodoList title="Aujourd'hui" />
+    <TodoList title="Demain" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TaskDay from "./components/TaskDay.vue";
 import TheNavbar from "./components/TheNavbar.vue";
+import TodoList from "./components/TodoList.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    TaskDay,
     TheNavbar,
+    TodoList,
   },
 });
 </script>
@@ -29,6 +28,10 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #cad1d8;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/layered-waves-haikei2.svg);
+  background-size: cover;
 }
 body {
   background-color: #171717;
@@ -40,6 +43,7 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 }
 * {
   box-sizing: border-box;
@@ -49,8 +53,13 @@ html {
   align-items: center;
   justify-content: center;
 }
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 .container {
-  padding: 0 30px;
+  padding: 0 2.5rem;
 }
 .carousel {
   display: flex;
@@ -59,10 +68,9 @@ html {
   align-items: stretch;
   padding-bottom: 80px;
 }
-@media screen and (max-width: 1500px) {
-  .carousel {
-    flex-flow: column;
-    align-items: center;
+@media screen and (min-width: 1500px) {
+  .container {
+    padding: 0 10rem;
   }
 }
 button {

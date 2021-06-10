@@ -7,6 +7,7 @@ npm run build
 
 ## Doc:
 modal doc : https://v3.vue-final-modal.org/examples/stepByStep
+inspiration: https://tappsk.com/
 
 # Vue 3 + Typescript + Vite
 
