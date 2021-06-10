@@ -59,7 +59,7 @@ html {
   flex-direction: column;
 }
 .container {
-  padding: 0 2.5rem;
+  padding: 0 2.5rem 0 8rem;
 }
 .carousel {
   display: flex;
@@ -68,9 +68,17 @@ html {
   align-items: stretch;
   padding-bottom: 80px;
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 900px) {
   .container {
     padding: 0 10rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  #app {
+    background-position-x: -64px;
+  }
+  .container {
+    padding: 0 0.5rem 0 4rem;
   }
 }
 button {

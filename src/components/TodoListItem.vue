@@ -32,13 +32,12 @@ export default defineComponent({
   height: 3rem;
   cursor: pointer;
   margin: 3px;
-  padding: 0px 5px;
+  padding: 0px 0px 0px 2rem;
   border-radius: 3px;
   justify-content: space-between;
   display: flex;
   align-items: center;
   text-align: left;
-  padding-left: 2rem;
 }
 .todo-wrapper:hover {
   background-color: hsla(0, 0%, 19%, 30%);
@@ -62,6 +61,15 @@ export default defineComponent({
 }
 .todo-wrapper:hover button {
   background-color: hsl(0, 0%, 50%);
+}
+@media screen and (max-width: 550px) {
+  .todo-wrapper {
+    flex-direction: column;
+  padding: 0px 0px 0px 1rem;
+  }
+  .button-wrapper {
+    flex-direction: row;
+  }
 }
 #ghis:hover {
   color: hsl(219, 70%, 40%);
